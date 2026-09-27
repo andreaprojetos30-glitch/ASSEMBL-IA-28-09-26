@@ -1,0 +1,19 @@
+:root {
+  --ink: #16181b;
+  --plate: #565a5d;
+  --plate-deep: #45494c;
+  --paper: #f3f0ea;
+  --paper-2: #e7e2d9;
+  --white: #fbfaf7;
+  --muted: #5c6164;
+  --line: rgba(22, 24, 27, 0.14);
+  --line-strong: rgba(22, 24, 27, 0.28);
+  --sea: #d5ddd8;
+  --sea-deep: #b7c4be;
+  --sand: #efe6d8;
+  --shadow: 0 24px 60px rgba(22, 24, 27, 0.12);
+  --serif: "Palatino Linotype", Palatino, "Iowan Old Style", Georgia, serif;
+  --sans: "Segoe UI", "Helvetica Neue", sans-serif;
+  --ease: cubic-bezier(0.22, 0.7, 0.2, 1);
+  --chrome: 4.5rem;
+}

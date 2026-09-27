@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Porta do Sol · Assembleia</title>
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/screens.css">
+</head>
+<body>
+  <p class="hint">Setas para navegar · F para o modo assembleia</p>
+
+  <main>
+    <section class="screen screen-visao" id="visao" aria-label="Onde o Porta do Sol quer chegar">
+      <div class="brand-panel">
+        <p class="brand-kicker">Assembleia · João Pessoa</p>
+        <img class="brand-mark" src="assets/logo-placa.png" alt="Porta do Sol, Condomínio Residencial">
+      </div>
+      <div class="copy-panel">
+        <svg class="sun" viewBox="0 0 200 160" aria-hidden="true">
+          <circle cx="100" cy="128" r="28"></circle>
+          <line x1="132" y1="116" x2="176" y2="98"></line>
+          <line x1="128" y1="102" x2="164" y2="64"></line>
+          <line x1="116" y1="94" x2="140" y2="38"></line>
+          <line x1="100" y1="92" x2="100" y2="22"></line>
+          <line x1="84" y1="94" x2="60" y2="38"></line>
+          <line x1="72" y1="102" x2="36" y2="64"></line>
+          <line x1="68" y1="116" x2="24" y2="98"></line>
+        </svg>
+        <p class="eyebrow">Condomínio Residencial Porta do Sol</p>
+        <h1>
+          <span class="line-soft">Onde o</span>
+          <span class="line-name">Porta do Sol</span>
+          <span class="line-soft">quer chegar?</span>
+        </h1>
+        <p class="question">Qual é o condomínio que queremos ter nos próximos anos?</p>
+        <p class="complement">Cuidar do presente. Evoluir constantemente. Valorizar o nosso patrimônio.</p>
+      </div>
+    </section>
+
+    <section class="screen screen-entorno" id="entorno" aria-label="O potencial está ao nosso redor">
+      <header class="entorno-head">
+        <div>
+          <p class="eyebrow">Portal do Sol · João Pessoa</p>
+          <h2>O potencial está ao nosso redor</h2>
+        </div>
+      </header>
+
+      <div class="stage" id="stage">
+        <svg class="territory" viewBox="0 0 1000 640" preserveAspectRatio="none" aria-hidden="true">
+          <path class="coast" d="M640 70 C780 10 920 20 1000 0 L1000 160 C880 130 760 150 640 120 Z"></path>
+          <ellipse class="land" cx="500" cy="340" rx="440" ry="250"></ellipse>
+          <ellipse class="ring" cx="500" cy="340" rx="270" ry="150"></ellipse>
+          <path class="avenue" d="M30 470 C220 430 360 370 500 330 S780 270 990 300"></path>
+        </svg>
+        <p class="anchor" id="anchor"></p>
+        <button class="here" id="here" type="button">
+          <span class="here-mark"></span>
+          <strong>Porta do Sol</strong>
+          <small>Você está aqui</small>
+        </button>
+        <div id="points"></div>
+        <svg class="links" id="links" aria-hidden="true"></svg>
+
+        <aside class="panel" id="panel" hidden>
+          <div class="frame" id="panel-frame" hidden>
+            <img id="panel-photo" alt="">
+          </div>
+          <div class="photo-nav" id="photo-nav" hidden>
+            <button type="button" id="photo-prev">Anterior</button>
+            <span id="photo-count"></span>
+            <button type="button" id="photo-next">Próxima</button>
+          </div>
+          <div class="panel-top">
+            <h3 id="panel-title" tabindex="-1"></h3>
+            <button class="icon-btn" id="panel-close" type="button" aria-label="Fechar">
+              <i data-lucide="x"></i>
+            </button>
+          </div>
+          <p class="distance" id="panel-distance"></p>
+          <p class="fact" id="panel-fact"></p>
+          <p class="address" id="panel-address"></p>
+          <p class="distance-note" id="panel-note"></p>
+        </aside>
+      </div>
+
+      <div class="dock">
+        <div>
+          <div class="stats" id="stats"></div>
+          <p class="method">Preços de anúncio. Não são valorização comprovada nem projeção para o Porta do Sol. O índice acompanha apartamentos anunciados.</p>
+        </div>
+        <div class="closing" aria-live="polite">
+          <p class="closing-a">O entorno está evoluindo.</p>
+          <p class="closing-b">E o Porta do Sol?</p>
+          <p class="closing-c">Nosso potencial também depende da forma como cuidamos e evoluímos o que já temos.</p>
+        </div>
+        <div class="vision">
+          <ol class="chain">
+            <li>Condomínio menor</li>
+            <li>Intervenções mais direcionadas</li>
+            <li>Melhorias mais perceptíveis</li>
+            <li>Melhor experiência</li>
+            <li>Patrimônio mais bem cuidado</li>
+          </ol>
+          <p class="chain-note">Visão de evolução. Não é garantia de valorização financeira.</p>
+          <button class="replay" id="replay" type="button">Rever a entrada</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="chrome">
+    <button class="nav-btn" id="prev-btn" type="button">
+      <i data-lucide="arrow-left"></i>
+      <span>Voltar</span>
+    </button>
+    <nav class="dots" aria-label="Telas">
+      <button type="button" data-go="visao">Visão</button>
+      <button type="button" data-go="entorno">Entorno</button>
+    </nav>
+    <button class="nav-btn" id="next-btn" type="button">
+      <span>Avançar</span>
+      <i data-lucide="arrow-right"></i>
+    </button>
+    <button class="ghost-btn" id="assembly-btn" type="button" aria-pressed="false">
+      <i data-lucide="maximize"></i>
+      <span>Modo assembleia</span>
+    </button>
+    <button class="ghost-btn" id="sources-btn" type="button">
+      <i data-lucide="link"></i>
+      <span>Fontes</span>
+    </button>
+  </div>
+
+  <dialog class="dialog" id="sources" aria-labelledby="sources-title">
+    <div class="dialog-head">
+      <h2 id="sources-title">Fontes</h2>
+      <button class="icon-btn" id="sources-close" type="button" aria-label="Fechar fontes">
+        <i data-lucide="x"></i>
+      </button>
+    </div>
+    <div class="dialog-body" id="source-list"></div>
+  </dialog>
+
+  <script src="vendor/lucide.min.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/motion.js"></script>
+  <script src="js/navigation.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,233 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  background: var(--paper);
+  color: var(--ink);
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: var(--sans);
+  background:
+    radial-gradient(1200px 500px at 80% -10%, rgba(213, 221, 216, 0.7), transparent 60%),
+    var(--paper);
+}
+
+button,
+a {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  background: none;
+  border: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 3px;
+}
+
+.chrome {
+  position: fixed;
+  z-index: 20;
+  left: 1.25rem;
+  right: 1.25rem;
+  bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  pointer-events: none;
+}
+
+.chrome > * {
+  pointer-events: auto;
+}
+
+.nav-btn,
+.ghost-btn {
+  height: 2.5rem;
+  padding: 0 0.9rem;
+  border-radius: 999px;
+  background: rgba(251, 250, 247, 0.88);
+  border: 1px solid var(--line);
+  backdrop-filter: blur(10px);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-size: 0.72rem;
+}
+
+.nav-btn svg,
+.ghost-btn svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+.dots {
+  margin: 0 auto;
+  display: flex;
+  gap: 0.4rem;
+  padding: 0.3rem;
+  border-radius: 999px;
+  background: rgba(251, 250, 247, 0.88);
+  border: 1px solid var(--line);
+  backdrop-filter: blur(10px);
+}
+
+.dots button {
+  min-width: 5.5rem;
+  height: 2rem;
+  padding: 0 0.8rem;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.dots button[aria-current="true"] {
+  background: var(--ink);
+  color: var(--white);
+}
+
+.hint {
+  position: fixed;
+  top: 1.1rem;
+  right: 1.4rem;
+  z-index: 20;
+  margin: 0;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.dialog {
+  width: min(640px, calc(100vw - 2rem));
+  border: 0;
+  border-radius: 1.25rem;
+  padding: 0;
+  background: var(--white);
+  color: var(--ink);
+  box-shadow: var(--shadow);
+}
+
+.dialog::backdrop {
+  background: rgba(22, 24, 27, 0.46);
+}
+
+.dialog-head,
+.dialog-body {
+  padding: 1.25rem 1.4rem;
+}
+
+.dialog-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--line);
+}
+
+.dialog-head h2 {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+.dialog-body {
+  max-height: min(70vh, 640px);
+  overflow: auto;
+}
+
+.source + .source {
+  margin-top: 1.1rem;
+  padding-top: 1.1rem;
+  border-top: 1px solid var(--line);
+}
+
+.source h3 {
+  margin: 0 0 0.25rem;
+  font-size: 1rem;
+}
+
+.source p {
+  margin: 0.2rem 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.45;
+}
+
+.source a {
+  color: var(--ink);
+}
+
+body.is-assembly .hint,
+body.is-assembly #sources-btn,
+body.is-assembly .nav-btn span,
+body.is-assembly .ghost-btn span {
+  display: none;
+}
+
+body.is-assembly .nav-btn,
+body.is-assembly .ghost-btn {
+  width: 2.75rem;
+  padding: 0;
+  justify-content: center;
+}
+
+body.is-assembly .dots button {
+  min-width: 0;
+  width: 0.7rem;
+  height: 0.7rem;
+  padding: 0;
+  font-size: 0;
+  background: transparent;
+  border: 1px solid var(--ink);
+}
+
+body.is-assembly .dots button[aria-current="true"] {
+  background: var(--ink);
+}
+
+@media (max-width: 800px) {
+  .nav-btn span,
+  .ghost-btn span {
+    display: none;
+  }
+
+  .nav-btn,
+  .ghost-btn {
+    width: 2.5rem;
+    padding: 0;
+    justify-content: center;
+  }
+
+  .hint {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
