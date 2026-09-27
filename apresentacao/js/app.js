@@ -118,10 +118,32 @@ window.PDSApp = (function () {
       frame.hidden = true;
     }
     document.getElementById("panel-title").textContent = item.name;
-    document.getElementById("panel-distance").textContent = item.distance;
-    document.getElementById("panel-fact").textContent = item.fact;
-    document.getElementById("panel-address").textContent = item.address;
-    document.getElementById("panel-note").textContent = item.distanceNote || "";
+    const sourceLine = document.getElementById("panel-address");
+    sourceLine.replaceChildren();
+    if (item.sale) {
+      document.getElementById("panel-distance").textContent = item.sale.price;
+      document.getElementById("panel-fact").textContent = item.sale.detail;
+      if (item.sale.url) {
+        sourceLine.hidden = false;
+        const label = document.createElement("span");
+        label.textContent = "Fonte: ";
+        const link = document.createElement("a");
+        link.href = item.sale.url;
+        link.target = "_blank";
+        link.rel = "noopener noreferrer";
+        link.textContent = item.sale.publisher;
+        sourceLine.append(label, link);
+      } else {
+        sourceLine.hidden = true;
+      }
+      document.getElementById("panel-note").textContent = item.sale.note || "";
+    } else {
+      document.getElementById("panel-distance").textContent = item.distance || "";
+      document.getElementById("panel-fact").textContent = item.fact || "";
+      sourceLine.hidden = !item.address;
+      sourceLine.textContent = item.address || "";
+      document.getElementById("panel-note").textContent = item.distanceNote || "";
+    }
     document.getElementById("photo-nav").hidden = photos.length < 2;
   }
 

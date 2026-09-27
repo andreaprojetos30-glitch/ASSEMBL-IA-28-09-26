@@ -535,9 +535,13 @@
 }
 
 .panel .address {
-  margin: 0.35rem 0 0;
-  color: var(--muted);
+  margin: 0.45rem 0 0;
   font-size: 0.85rem;
+}
+
+.panel .address a {
+  color: var(--ink);
+  text-underline-offset: 0.15em;
 }
 
 .frame {

@@ -37,12 +37,16 @@ window.PDS = {
       x: 60,
       y: 30,
       distance: "cerca de 240 m",
-      fact: "Condomínio horizontal de casas. Loteamento aprovado em 1998.",
-      address: "Av. Hilton Souto Maior, 6701 — Portal do Sol",
-      distanceNote:
-        "Cerca de 240 m em linha reta entre os pontos nomeados no OpenStreetMap.",
+      fact: "Condomínio horizontal de casas.",
+      sale: {
+        price: "R$ 1.950.000",
+        detail: "Casa anunciada com 4 suítes e 400 m².",
+        publisher: "MGF Imóveis · anúncio Imoveis JP",
+        url: "https://pb.mgfimoveis.com.br/casa-no-condominio-cabo-branco-prive-4-suites-400m-venda-pb-joao-pessoa-290275493",
+        note: "Preço de anúncio, consultado em 27 de setembro de 2026. Não é média do condomínio."
+      },
       photos: [],
-      sourceIds: ["vizinhos", "osm", "scielo"]
+      sourceIds: ["venda-cabo"]
     },
     {
       id: "extremo",
@@ -51,12 +55,16 @@ window.PDS = {
       x: 74,
       y: 46,
       distance: "cerca de 530 m",
-      fact: "Residencial na mesma avenida, a leste do Porta do Sol.",
-      address: "Av. Hilton Souto Maior, 7101 — Portal do Sol",
-      distanceNote:
-        "Cerca de 530 m em linha reta entre os pontos nomeados no OpenStreetMap.",
+      fact: "Condomínio de casas.",
+      sale: {
+        price: "R$ 2.550.000",
+        detail: "Casa anunciada com 5 suítes e 410 m².",
+        publisher: "Deztop",
+        url: "https://deztop.com/br/imovel/295816010/casa-condominio-5-dormitorios-joao-pessoa-condominio-extremo",
+        note: "Preço de anúncio, consultado em 27 de setembro de 2026. Não é média do condomínio."
+      },
       photos: [],
-      sourceIds: ["vizinhos", "osm"]
+      sourceIds: ["venda-extremo"]
     },
     {
       id: "americas",
@@ -64,13 +72,17 @@ window.PDS = {
       short: "Das Américas",
       x: 66,
       y: 28,
-      distance: "Av. Panorâmica",
-      fact: "Condomínio de lotes de alto padrão, com parque de cerca de 66 mil m².",
-      address: "Av. Panorâmica, 500 — Portal do Sol",
-      distanceNote:
-        "Sem distância em metros: o número do endereço varia entre o material da assembleia e o site do empreendimento. A posição no território é ilustrativa, no eixo da orla.",
+      distance: "eixo da orla",
+      fact: "Condomínio de casas de alto padrão.",
+      sale: {
+        price: "R$ 5.800.000",
+        detail: "Casa anunciada com 6 suítes e cerca de 394 m².",
+        publisher: "Luxo Capital Imobiliário",
+        url: "https://www.luxocapitalimobiliario.com.br/imovel/casa-no-condominio-das-americas-joao-pessoa-portal-do-sol-6-quartos-4-garagens-venda-ref-116/",
+        note: "Preço de anúncio, consultado em 27 de setembro de 2026. Não é média do condomínio."
+      },
       photos: [],
-      sourceIds: ["vizinhos", "americas"]
+      sourceIds: ["venda-americas"]
     },
     {
       id: "greenhouse",
@@ -78,13 +90,17 @@ window.PDS = {
       short: "Green House",
       x: 28,
       y: 62,
-      distance: "1,5 km da Praia do Seixas",
-      fact: "Na Avenida Hilton Souto Maior, a cerca de 1,5 km da Praia do Seixas.",
-      address: "Av. Hilton Souto Maior — Portal do Sol",
-      distanceNote:
-        "A distância é a registrada na planilha da assembleia, em relação à Praia do Seixas — não em relação ao Porta do Sol. A posição no desenho é ilustrativa.",
+      distance: "lançamento",
+      fact: "Condomínio de casas da Alliance, em construção.",
+      sale: {
+        price: "A partir de R$ 2.269.733",
+        detail: "Casa de 182 m². Preço anunciado de lançamento.",
+        publisher: "Apto",
+        url: "https://apto.vc/br/pb/joao-pessoa/portal-do-sol/alliance-green-house",
+        note: "Preço de anúncio, consultado em 27 de setembro de 2026. Valor inicial, não é média do condomínio."
+      },
       photos: [],
-      sourceIds: ["vizinhos"]
+      sourceIds: ["venda-greenhouse"]
     },
     {
       id: "bloco",
@@ -94,9 +110,13 @@ window.PDS = {
       y: 70,
       distance: "Em frente",
       fact: "Empreendimento em frente ao condomínio. Imagens do material da assembleia.",
-      address: "Em frente ao Porta do Sol",
-      distanceNote:
-        "A relação “em frente” vem da planilha de vizinhos. Não há medição de metros neste material.",
+      sale: {
+        price: "Sem preço publicado",
+        detail: "Não há anúncio de venda com valor localizado para este empreendimento.",
+        publisher: "",
+        url: "",
+        note: "Busca em 27 de setembro de 2026. A planilha da assembleia identifica o Grupo Bloco, sem valor de venda."
+      },
       photos: [
         { src: "assets/grupo-bloco-1.jpg", alt: "Imagem do empreendimento Grupo Bloco, vista aérea, constante no material da assembleia." },
         { src: "assets/grupo-bloco-2.jpg", alt: "Imagem do empreendimento Grupo Bloco, fachada, constante no material da assembleia." }
@@ -173,6 +193,42 @@ window.PDS = {
       url: "https://www.scielo.br/j/sn/a/4H4hNqPtJBrxrkqmtYQcYMt/?format=html&lang=pt",
       supports:
         "O Cabo Branco Residence Privê é citado como loteamento de condomínio fechado horizontal, aprovado em 1998, no litoral sul de João Pessoa."
+    },
+    {
+      id: "venda-cabo",
+      title: "Casa no Condomínio Cabo Branco Privê, 4 suítes e 400 m²",
+      publisher: "MGF Imóveis · anúncio de Imoveis JP",
+      date: "Anúncio imobiliário",
+      accessed: "27 de setembro de 2026",
+      url: "https://pb.mgfimoveis.com.br/casa-no-condominio-cabo-branco-prive-4-suites-400m-venda-pb-joao-pessoa-290275493",
+      supports: "Preço anunciado de R$ 1.950.000 para uma casa de 400 m² no Cabo Branco Residence Privê. É um anúncio, não a média do condomínio."
+    },
+    {
+      id: "venda-extremo",
+      title: "Casa de alto padrão no Condomínio Extremo Oriental",
+      publisher: "Deztop",
+      date: "Anúncio imobiliário",
+      accessed: "27 de setembro de 2026",
+      url: "https://deztop.com/br/imovel/295816010/casa-condominio-5-dormitorios-joao-pessoa-condominio-extremo",
+      supports: "Preço anunciado de R$ 2.550.000 para uma casa de 410 m² com 5 suítes no Residencial Extremo Oriental."
+    },
+    {
+      id: "venda-americas",
+      title: "Casa no Condomínio das Américas",
+      publisher: "Luxo Capital Imobiliário",
+      date: "Anúncio imobiliário",
+      accessed: "27 de setembro de 2026",
+      url: "https://www.luxocapitalimobiliario.com.br/imovel/casa-no-condominio-das-americas-joao-pessoa-portal-do-sol-6-quartos-4-garagens-venda-ref-116/",
+      supports: "Preço anunciado de R$ 5.800.000 para uma casa de cerca de 394 m² com 6 suítes no Condomínio das Américas."
+    },
+    {
+      id: "venda-greenhouse",
+      title: "Alliance Green House",
+      publisher: "Apto",
+      date: "Página do lançamento",
+      accessed: "27 de setembro de 2026",
+      url: "https://apto.vc/br/pb/joao-pessoa/portal-do-sol/alliance-green-house",
+      supports: "Preço anunciado a partir de R$ 2.269.733 para a planta de 182 m². Empreendimento em construção, da Alliance."
     },
     {
       id: "americas",
