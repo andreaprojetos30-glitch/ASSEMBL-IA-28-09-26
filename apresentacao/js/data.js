@@ -11,8 +11,83 @@
 window.PDS = {
   screens: [
     { id: "visao", label: "Visão" },
-    { id: "entorno", label: "Entorno" }
+    { id: "entorno", label: "Entorno" },
+    { id: "hidrico", label: "Água" }
   ],
+
+  hidrico: {
+    details: {
+      problema: {
+        title: "28/07 · Problema",
+        lines: [
+          "Queda de fase na rede elétrica externa.",
+          "Travamento e queima total da bomba principal (Ebara).",
+          "29/07 — Remoção. Parecer: queima por sobrecarga de tensão.",
+          "30/07 — Medição interna: tensão acima do limite permitido."
+        ],
+        source: "Cronologia interna do caso Energisa."
+      },
+      acao: {
+        title: "31/07 · Ação",
+        lines: [
+          "31/07 — Ressarcimento nº 224891128.",
+          "31/07 — Medição de tensão nº 9810485715.",
+          "05/08 — Chamado nº 225317206. OS nº 1016696210.",
+          "Medidor contínuo. Sobretensão nos horários de pico solar.",
+          "06/08 — Ofício na sede da Energisa. Protocolo nº 00641.000763/2026."
+        ],
+        source: "Cronologia interna do caso Energisa."
+      },
+      acompanhamento: {
+        title: "25/08 · Acompanhamento",
+        lines: [
+          "19/08 — Reabertura do ressarcimento. Processo nº 202602409.",
+          "20/08 — Carta de negativa do ressarcimento.",
+          "Laudo: queima de duas centrais da cerca elétrica, pelo mesmo motivo.",
+          "25/08 — Relatório da Energisa. Carta datada de 24/08/2026.",
+          "UC 185848305389. Medição de 12/08 a 19/08, a cada 10 minutos.",
+          "1.008 leituras. Ligação trifásica. Tensão nominal: 220 V.",
+          "Faixa adequada no documento: 202 V a 231 V.",
+          "Limites: DRP 3% e DRC 0,5%.",
+          "Fase A — máx. 244,93 V · DRP 4,46% · DRC 12,1%.",
+          "Fase B — máx. 245,61 V · DRP 6,15% · DRC 14,98%.",
+          "Fase C — máx. 239,69 V · DRP 8,03% · DRC 9,32%.",
+          "As três fases ficaram acima dos dois limites.",
+          "Carta: necessidade de aprimoramento na rede.",
+          "Compensação prevista até a tensão normalizar no ponto de entrega."
+        ],
+        source: "Carta de medição da Energisa, 24/08/2026, e cronologia interna."
+      },
+      situacao: {
+        title: "19/09 · Situação",
+        lines: [
+          "03/09 — Ouvidoria Energisa nº 63760. Prazo de 10 dias úteis.",
+          "14/09 — Ouvidoria da ARPB nº 00001.082095/2026-6906.",
+          "18/09 — Resposta sem posição sobre o ressarcimento.",
+          "Novo chamado nº 64365. Previsão de resolução até 28/09/2026.",
+          "19/09 — Ouvidoria nº 64384.",
+          "Pedido de acesso aos projetos de melhoria da rede e de contato da manutenção.",
+          "19/09 — ANEEL nº 3070901062682.",
+          "Prazos do PRODIST não se aplicam a este caso.",
+          "Orientação da ANEEL: aguardar o prazo estipulado."
+        ],
+        source: "Cronologia interna do caso Energisa. Último registro: 19/09/2026."
+      },
+      outorga: {
+        title: "Outorga nº 35845",
+        lines: [
+          "AESA. Renovação. Uso indicado no documento: abastecimento público.",
+          "Processo nº 03934/2026. Expedida em 09/08/2026. Validade: 09/08/2027.",
+          "Poço tubular. Vazão: 7,10 m³/h. Volume anual: 52.600 m³.",
+          "54 habitações. Bomba submersa.",
+          "Finalidade escrita: limpeza em geral, prevenção e combate a incêndios, jardinagem e outras finalidades.",
+          "Se a água for usada como solução alternativa de abastecimento coletivo, a outorga prevê medidor por unidade.",
+          "Em verificação: atendimento direto às residências."
+        ],
+        source: "Outorga AESA nº 35845, Condomínio Residencial Porta do Sol."
+      }
+    }
+  },
 
   place: {
     name: "Condomínio Residencial Porta do Sol",
@@ -259,6 +334,36 @@ window.PDS = {
       url: "https://myside.com.br/guia-imoveis/bairros-mais-caros-joao-pessoa-pb",
       supports:
         "Altiplano Cabo Branco: R$ 10.550/m² e +14,30% em 12 meses. Portal do Sol, no mesmo recorte e fora dos números principais da tela: R$ 5.722/m² e +6,50% em 12 meses. O preço médio da cidade citado na página (R$ 8.387/m²) coincide com o informe oficial de agosto de 2026. São preços de anúncio."
+    },
+    {
+      id: "cronologia-energisa",
+      title: "Cronologia dos fatos — sobretensão, caso Energisa",
+      publisher: "Material interno — cronologia do condomínio",
+      date: "Registros de 28/07/2026 a 19/09/2026",
+      accessed: "27 de setembro de 2026",
+      url: "",
+      supports:
+        "Queima da bomba em 28/07/2026, pedidos, protocolos, negativa de ressarcimento, relatório de 25/08 e a situação em 19/09, com previsão de resolução até 28/09/2026."
+    },
+    {
+      id: "carta-energisa",
+      title: "Carta de medição — resultado do processo",
+      publisher: "Energisa Paraíba",
+      date: "João Pessoa, 24 de agosto de 2026",
+      accessed: "27 de setembro de 2026",
+      url: "",
+      supports:
+        "UC 185848305389. Medição de 12/08 a 19/08/2026, 1.008 leituras, 220 V, trifásica. Faixa de 202 V a 231 V. DRP e DRC acima do permitido nas três fases. Necessidade de aprimoramento na rede e compensação até a normalização."
+    },
+    {
+      id: "outorga",
+      title: "Outorga do direito de uso de água nº 35845",
+      publisher: "AESA — Agência Executiva de Gestão das Águas do Estado da Paraíba",
+      date: "09 de agosto de 2026. Validade até 09 de agosto de 2027",
+      accessed: "27 de setembro de 2026",
+      url: "",
+      supports:
+        "Renovação. Poço tubular, vazão de 7,10 m³/h, volume anual de 52.600 m³, 54 habitações e bomba submersa. Finalidade escrita: limpeza em geral, prevenção e combate a incêndios, jardinagem e outras finalidades."
     },
     {
       id: "logo",

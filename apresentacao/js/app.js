@@ -229,6 +229,26 @@ window.PDSApp = (function () {
     playEntorno();
   }
 
+  function openDetail(id) {
+    const item = window.PDS.hidrico.details[id];
+    if (!item) return;
+    document.getElementById("detail-title").textContent = item.title;
+    const body = document.getElementById("detail-body");
+    body.replaceChildren();
+    const list = document.createElement("ul");
+    list.className = "detail-list";
+    item.lines.forEach((line) => {
+      const li = document.createElement("li");
+      li.textContent = line;
+      list.append(li);
+    });
+    const source = document.createElement("p");
+    source.className = "detail-source";
+    source.textContent = item.source;
+    body.append(list, source);
+    document.getElementById("detail").showModal();
+  }
+
   function init() {
     renderStats();
     renderPoints();
@@ -244,11 +264,20 @@ window.PDSApp = (function () {
     document.getElementById("sources-close").addEventListener("click", () => {
       document.getElementById("sources").close();
     });
+    document.querySelectorAll("[data-detail]").forEach((button) => {
+      button.addEventListener("click", () => openDetail(button.dataset.detail));
+    });
+    document.getElementById("detail-close").addEventListener("click", () => {
+      document.getElementById("detail").close();
+    });
     window.addEventListener("resize", drawLinks);
-    if (new URLSearchParams(location.search).get("tela") === "entorno") {
+    const tela = new URLSearchParams(location.search).get("tela");
+    if (tela === "entorno") {
       played = true;
       applyPhase("fecho");
-      document.getElementById("entorno").scrollIntoView({ behavior: "instant", block: "start" });
+    }
+    if (tela && document.getElementById(tela)) {
+      document.getElementById(tela).scrollIntoView({ behavior: "instant", block: "start" });
     }
   }
 

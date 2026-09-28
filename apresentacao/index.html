@@ -108,6 +108,110 @@
         </div>
       </div>
     </section>
+
+    <section class="screen screen-hidrico" id="hidrico" aria-label="Questões hídricas e energia">
+      <header class="hidrico-top">
+        <div>
+          <p class="eyebrow">Dois sistemas</p>
+          <h2>Questões hídricas + energia</h2>
+          <p class="hidrico-sub">Um problema identificado a partir da queima da bomba do poço</p>
+        </div>
+        <p class="marco">
+          <strong>28/07/2026</strong>
+          <span>Queima da bomba do poço</span>
+        </p>
+      </header>
+
+      <div class="hidrico-body">
+        <div class="track">
+          <h3>
+            <i data-lucide="zap"></i>
+            Energia
+          </h3>
+          <div class="marks">
+            <button type="button" class="mark" data-detail="problema">
+              <time>28/07</time>
+              <b>Problema</b>
+              <span>Queima da bomba</span>
+            </button>
+            <button type="button" class="mark" data-detail="acao">
+              <time>31/07</time>
+              <b>Ação</b>
+              <span>Pedidos à Energisa</span>
+            </button>
+            <button type="button" class="mark" data-detail="acompanhamento">
+              <time>25/08</time>
+              <b>Acompanhamento</b>
+              <span>Tensão fora do limite</span>
+            </button>
+            <button type="button" class="mark" data-detail="situacao">
+              <time>19/09</time>
+              <b>Situação</b>
+              <span>Aguardando · até 28/09</span>
+            </button>
+          </div>
+          <p class="span-line">28/07 a 19/09 · medição, ofício e confirmação da Energisa</p>
+        </div>
+
+        <div class="spine">
+          <ol class="flow">
+            <li>
+              <i data-lucide="zap"></i>
+              Energia
+            </li>
+            <li class="is-pump">Bomba do poço</li>
+            <li>
+              <i data-lucide="droplet"></i>
+              Reservatório
+            </li>
+            <li>
+              <i data-lucide="house"></i>
+              Condomínio
+            </li>
+          </ol>
+          <p class="equation">Parada da bomba = parada da captação</p>
+          <p class="hours">
+            <strong>4</strong>
+            <small>horas de parada</small>
+          </p>
+          <p class="hours-note">Com a bomba desligada, o poço deixa de enviar água ao reservatório.</p>
+        </div>
+
+        <div class="track">
+          <h3>
+            <i data-lucide="droplet"></i>
+            Água
+          </h3>
+          <p class="water-label">Durante a parada</p>
+          <ul class="points">
+            <li>Captação do poço interrompida</li>
+            <li>Relatos de falta d'água em algumas casas</li>
+          </ul>
+          <p class="water-label">Em verificação</p>
+          <ul class="points">
+            <li>Caixas residenciais nesse período</li>
+            <li>Possíveis vazamentos</li>
+            <li>
+              <button type="button" data-detail="outorga">Outorga nº 35845 — uso da água</button>
+            </li>
+            <li>Consumo e caminho da água</li>
+          </ul>
+        </div>
+      </div>
+
+      <footer class="hidrico-foot">
+        <p>O que começou com a queima de uma bomba revelou a necessidade de olhar para dois sistemas essenciais.</p>
+        <div>
+          <p class="pair">Energia + Água</p>
+          <ol class="steps">
+            <li>Diagnosticar</li>
+            <li>Entender</li>
+            <li>Corrigir</li>
+            <li>Prevenir</li>
+          </ol>
+        </div>
+      </footer>
+    </section>
   </main>
 
   <div class="chrome">
@@ -118,6 +222,7 @@
     <nav class="dots" aria-label="Telas">
       <button type="button" data-go="visao">Visão</button>
       <button type="button" data-go="entorno">Entorno</button>
+      <button type="button" data-go="hidrico">Água</button>
     </nav>
     <button class="nav-btn" id="next-btn" type="button">
       <span>Avançar</span>
@@ -141,6 +246,16 @@
       </button>
     </div>
     <div class="dialog-body" id="source-list"></div>
+  </dialog>
+
+  <dialog class="dialog" id="detail" aria-labelledby="detail-title">
+    <div class="dialog-head">
+      <h2 id="detail-title"></h2>
+      <button class="icon-btn" id="detail-close" type="button" aria-label="Fechar detalhe">
+        <i data-lucide="x"></i>
+      </button>
+    </div>
+    <div class="dialog-body" id="detail-body"></div>
   </dialog>
 
   <script src="vendor/lucide.min.js"></script>

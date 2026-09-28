@@ -40,8 +40,7 @@ window.PDSNav = (function () {
   }
 
   function onKey(event) {
-    const dialog = document.getElementById("sources");
-    if (dialog && dialog.open) return;
+    if (document.querySelector("dialog[open]")) return;
     const tag = event.target.tagName;
     if (tag === "INPUT" || tag === "TEXTAREA") return;
 
