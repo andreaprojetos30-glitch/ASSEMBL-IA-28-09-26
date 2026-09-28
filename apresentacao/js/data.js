@@ -12,7 +12,8 @@ window.PDS = {
   screens: [
     { id: "visao", label: "Visão" },
     { id: "entorno", label: "Entorno" },
-    { id: "hidrico", label: "Água" }
+    { id: "hidrico", label: "Água" },
+    { id: "caminho", label: "Solução" }
   ],
 
   hidrico: {
@@ -85,6 +86,34 @@ window.PDS = {
           "Em verificação: atendimento direto às residências."
         ],
         source: "Outorga AESA nº 35845, Condomínio Residencial Porta do Sol."
+      },
+      hidrometro: {
+        title: "Hidrômetro",
+        lines: [
+          "Outorga AESA nº 35845, condicionante II.",
+          "Quando a água for usada como solução alternativa de abastecimento coletivo, os usuários deverão instalar medidor para contabilizar o seu consumo.",
+          "Finalidade no documento: contabilizar o consumo.",
+          "Prazo escrito: até a próxima renovação da outorga.",
+          "Referência: documento de 09/08/2026. Processo nº 03934/2026. Validade: 09/08/2027."
+        ],
+        source: "Outorga AESA nº 35845, condicionante II."
+      },
+      juridico: {
+        title: "Análise jurídica",
+        lines: [
+          "Histórico e documentos do caso Energisa em análise jurídica.",
+          "Status: em análise.",
+          "Sem conclusão sobre responsabilidade."
+        ],
+        source: "Encaminhamento da administração. Esta tela não traz parecer jurídico."
+      },
+      gerador: {
+        title: "Gerador",
+        lines: [
+          "Proposta para manter sistemas essenciais quando a energia é interrompida.",
+          "Não está apresentado como correção de oscilação ou de defeito da rede."
+        ],
+        source: "Proposta da administração para a assembleia."
       }
     }
   },
